@@ -1,26 +1,33 @@
+import React, { SyntheticEvent } from "react";
+import { CompanySearch } from "../../company";
 import "./Card.css";
+import AddPortfolio from "../Portfolio/AddPortfolio/AddPortfolio";
 
+// Props arayüzü
 interface Props {
-  companyName: string;
-  ticker: string;
-  price: number;
+  id: string;
+  searchResult: CompanySearch;
+  onPortfolioCreate: (e: SyntheticEvent) => void;
 }
 
-const Card = (props: Props) => {
+// Card bileşeni
+const Card: React.FC<Props> = ({ id, searchResult, onPortfolioCreate }) => {
   return (
-    <div className="card">
-      <img
-        src="https://t4.ftcdn.net/jpg/05/62/16/01/360_F_562160112_92yO0mjcQbSCYoLGeT3i2ieTP9WF55le.jpg"
-        alt="image"
-      />
+    <div className="card" key={id}>
+      <img src="" alt="company logo" />
       <div className="details">
-        <h2>{props.companyName}</h2>
-        <p>{props.price}</p>
+        <h2>
+          {searchResult.name} ({searchResult.symbol})
+        </h2>
+        <p>{searchResult.currency}</p>
       </div>
       <p className="info">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis,
-        labore.
+        {searchResult.exchangeShortName} - {searchResult.stockExchange}
       </p>
+      <AddPortfolio
+        onPortfolioCreate={onPortfolioCreate}
+        symbol={searchResult.symbol}
+      />
     </div>
   );
 };
