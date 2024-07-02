@@ -36,6 +36,10 @@ const configs = [
     label: "Operating Income",
     render: (company: CompanyIncomeStatement) => company.operatingIncome,
   },
+  {
+    label: "Gross Margin Ratio",
+    render: (company: CompanyIncomeStatement) => company.grossProfitRatio,
+  },
 ];
 
 const IncomeStatement = (props: Props) => {
