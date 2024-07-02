@@ -1,7 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import hero from "./hero.png";
 import "./Hero.css";
-import { Link } from "react-router-dom";
 
 interface Props {}
 
@@ -27,7 +27,7 @@ const Hero = (props: Props) => {
           </div>
         </div>
         <div className="mb-24 mx-auto md:w-180 md:px-10 lg:mb-0 lg:w-1/2">
-          <img src={hero} alt="" className="w-56 rounded-xl shadow-2xl" />
+          <img src={hero} alt="" />
         </div>
       </div>
     </section>

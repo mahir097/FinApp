@@ -20,4 +20,5 @@ const CompanyDashboard = ({ children, ticker }: Props) => {
     </div>
   );
 };
+
 export default CompanyDashboard;

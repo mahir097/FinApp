@@ -1,6 +1,3 @@
-import React from "react";
-import { TestDataCompany } from "../Table/testData";
-
 type Props = {
   config: any;
   data: any;
@@ -38,4 +35,5 @@ const RatioList = ({ config, data }: Props) => {
     </div>
   );
 };
+
 export default RatioList;

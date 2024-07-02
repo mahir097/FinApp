@@ -5,6 +5,7 @@ export interface CompanySearch {
   stockExchange: string;
   symbol: string;
 }
+
 export interface CompanyProfile {
   symbol: string;
   price: number;
@@ -42,6 +43,7 @@ export interface CompanyProfile {
   isAdr: boolean;
   isFund: boolean;
 }
+
 export interface CompanyKeyRatios {
   dividendYielTTM: number;
   dividendYielPercentageTTM: number;
@@ -102,6 +104,7 @@ export interface CompanyKeyRatios {
   priceFairValueTTM: number;
   dividendPerShareTTM: number;
 }
+
 export interface CompanyIncomeStatement {
   date: string;
   symbol: string;
@@ -142,6 +145,7 @@ export interface CompanyIncomeStatement {
   link: string;
   finalLink: string;
 }
+
 export interface CompanyBalanceSheet {
   date: string;
   symbol: string;
@@ -198,6 +202,7 @@ export interface CompanyBalanceSheet {
   link: string;
   finalLink: string;
 }
+
 export interface CompanyCashFlow {
   date: string;
   symbol: string;

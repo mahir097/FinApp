@@ -32,4 +32,5 @@ const Table = ({ config, data }: Props) => {
     </div>
   );
 };
+
 export default Table;

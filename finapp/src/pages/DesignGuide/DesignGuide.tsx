@@ -1,7 +1,8 @@
 import React from "react";
-import { TestDataCompany } from "../../components/Table/testData";
-import RatioList from "../../components/RatioList/RatioList";
-import Table from "../../components/Table/Table";
+import Table from "../../Components/Table/Table";
+import RatioList from "../../Components/RatioList/RatioList";
+import { TestDataCompany } from "../../Components/Table/testData";
+import { CompanyKeyMetrics } from "../../company";
 
 type Props = {};
 
@@ -30,4 +31,5 @@ const DesignGuide = (props: Props) => {
     </>
   );
 };
+
 export default DesignGuide;

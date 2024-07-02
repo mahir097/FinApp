@@ -1,9 +1,4 @@
-import React, {
-  ChangeEvent,
-  MouseEvent,
-  SyntheticEvent,
-  useState,
-} from "react";
+import React, { ChangeEvent, useState, SyntheticEvent, FormEvent } from "react";
 
 interface Props {
   onSearchSubmit: (e: SyntheticEvent) => void;
@@ -13,8 +8,8 @@ interface Props {
 
 const Search: React.FC<Props> = ({
   onSearchSubmit,
-  handleSearchChange,
   search,
+  handleSearchChange,
 }: Props): JSX.Element => {
   return (
     <section className="relative bg-gray-100">

@@ -2,11 +2,12 @@ import React, { useEffect, useState } from "react";
 import { CompanyProfile } from "../../company";
 import { useParams } from "react-router-dom";
 import { getCompanyProfile } from "../../api";
-import Tile from "../../components/Tile/Tile";
-import CompanyDashboard from "../../components/CompanyDashboard/CompanyDashboard";
-import Sidebar from "../../components/Sidebar/Sidebar";
+import Sidebar from "../../Components/Sidebar/Sidebar";
+import CompanyDashboard from "../../Components/CompanyDashboard/CompanyDashboard";
+import Tile from "../../Components/Tile/Tile";
 
 interface Props {}
+
 const CompanyPage = (props: Props) => {
   let { ticker } = useParams();
 
@@ -19,6 +20,7 @@ const CompanyPage = (props: Props) => {
     };
     getProfileInit();
   }, []);
+
   return (
     <>
       {company ? (
@@ -26,6 +28,9 @@ const CompanyPage = (props: Props) => {
           <Sidebar />
           <CompanyDashboard ticker={ticker!}>
             <Tile title="Company Name" subTitle={company.companyName} />
+            <Tile title="Price" subTitle={company.price.toString()} />
+            <Tile title="Sector" subTitle={company.sector} />
+            <Tile title="Market Cap" subTitle={company.mktCap.toString()} />
           </CompanyDashboard>
         </div>
       ) : (
@@ -34,4 +39,5 @@ const CompanyPage = (props: Props) => {
     </>
   );
 };
+
 export default CompanyPage;
