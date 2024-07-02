@@ -88,7 +88,9 @@ export const getBalanceSheet = async (query: string) => {
 export const getCashFlow = async (query: string) => {
   try {
     const data = await axios.get<CompanyCashFlow[]>(
-      `https://financialmodelingprep.com/api/v3/cash-flow-statement/${query}?limit=100&apikey=${process.env.REACT_APP_API_KEY}`
+      `https://financialmodelingprep.com/api/v3/cash-flow-statement/${query}?limit=100&apikey=${
+        import.meta.env.VITE_API_KEY
+      }`
     );
     return data;
   } catch (error: any) {
@@ -99,7 +101,9 @@ export const getCashFlow = async (query: string) => {
 export const getCompData = async (query: string) => {
   try {
     const data = await axios.get<CompanyCompData[]>(
-      `https://financialmodelingprep.com/api/v4/stock_peers?symbol=${query}&apikey=${process.env.REACT_APP_API_KEY}`
+      `https://financialmodelingprep.com/api/v4/stock_peers?symbol=${query}&apikey=${
+        import.meta.env.VITE_API_KEY
+      }`
     );
     return data;
   } catch (error: any) {
@@ -110,7 +114,9 @@ export const getCompData = async (query: string) => {
 export const getTenK = async (query: string) => {
   try {
     const data = await axios.get<CompanyTenK[]>(
-      `https://financialmodelingprep.com/api/v3/sec_filings/${query}?type=10-K&page=0&apikey=${process.env.REACT_APP_API_KEY}`
+      `https://financialmodelingprep.com/api/v3/sec_filings/${query}?type=10-K&page=0&apikey=${
+        import.meta.env.VITE_API_KEY
+      }`
     );
     return data;
   } catch (error: any) {
