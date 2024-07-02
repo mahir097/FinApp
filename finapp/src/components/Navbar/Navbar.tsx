@@ -11,7 +11,7 @@ const Navbar = (props: Props) => {
       <div className="flex items-center justify-between">
         <div className="flex items-center space-x-20">
           <Link to="/">
-            <img src={logo} alt="" />
+            <img src={logo} alt="" className="w-32 rounded-full shadow-xl" />
           </Link>
           <div className="hidden font-bold lg:flex">
             <Link to="/search" className="text-black hover:text-darkBlue">
